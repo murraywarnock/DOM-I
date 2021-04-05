@@ -41,3 +41,20 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+const header = document.querySelector("header");
+const headerLinks = document.querySelectorAll('header nav a');
+
+// maybe below could be replaced with a .forEach on the headerLinks collection
+const hdrLinksArray = Array.from(headerLinks);
+hdrLinksArray[0].textContent = siteContent["nav"] ["nav-item-1"];
+hdrLinksArray[1].textContent = siteContent["nav"] ["nav-item-2"];
+hdrLinksArray[2].textContent = siteContent["nav"] ["nav-item-3"];
+hdrLinksArray[3].textContent = siteContent["nav"] ["nav-item-4"];
+hdrLinksArray[4].textContent = siteContent["nav"] ["nav-item-5"];
+hdrLinksArray[5].textContent = siteContent["nav"] ["nav-item-6"];
+
+console.log(hdrLinksArray[0]);
+
+let ctaImg = document.getElementById("cta-img");
+ctaImg.setAttribute('src', siteContent["cta"]["img-src"]);
