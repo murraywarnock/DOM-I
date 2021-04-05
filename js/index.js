@@ -45,8 +45,22 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 const header = document.querySelector("header");
 const headerLinks = document.querySelectorAll('header nav a');
 
+console.log(headerLinks)
+
 // maybe below could be replaced with a .forEach on the headerLinks collection
 const hdrLinksArray = Array.from(headerLinks);
+// headerLinks color - could not get forEach to work
+// hdrLinksArray.forEach(function(y) {
+//   return (y.sytle.color = "green");
+//  })
+headerLinks[0].style.color = "green";
+headerLinks[1].style.color = "green";
+headerLinks[2].style.color = "green";
+headerLinks[3].style.color = "green";
+headerLinks[4].style.color = "green";
+headerLinks[5].style.color = "green";
+
+
 hdrLinksArray[0].textContent = siteContent["nav"] ["nav-item-1"];
 hdrLinksArray[1].textContent = siteContent["nav"] ["nav-item-2"];
 hdrLinksArray[2].textContent = siteContent["nav"] ["nav-item-3"];
@@ -99,3 +113,18 @@ txtContact.querySelectorAll("p")[2].textContent = siteContent["contact"] ["email
 footerP = document.querySelector("footer").querySelector("p");
 footerP.textContent = siteContent["footer"] ["copyright"]
 // console.log(footerP);
+
+//new nav items
+const preNav = document.createElement('a')
+preNav.textContent = 'Before Link'
+preNav.href = '#'
+preNav.style.color = "green";
+const postNav = document.createElement('a')
+postNav.textContent = 'After Link'
+postNav.href = '#'
+postNav.style.color = "green";
+
+
+// newNav.classList.add('menu-item')
+document.querySelector('nav').appendChild(postNav)
+document.querySelector('nav').prepend(preNav)
