@@ -50,15 +50,17 @@ console.log(headerLinks)
 // maybe below could be replaced with a .forEach on the headerLinks collection
 const hdrLinksArray = Array.from(headerLinks);
 // headerLinks color - could not get forEach to work
-// hdrLinksArray.forEach(function(y) {
-//   return (y.sytle.color = "green");
-//  })
-headerLinks[0].style.color = "green";
-headerLinks[1].style.color = "green";
-headerLinks[2].style.color = "green";
-headerLinks[3].style.color = "green";
-headerLinks[4].style.color = "green";
-headerLinks[5].style.color = "green";
+// headerLinks.forEach(i => i.sytle.color = "green");
+for (i = 0; i < hdrLinksArray.length; i++) {
+  hdrLinksArray[i].style.color = "green";
+}
+
+// headerLinks[0].style.color = "green";
+// headerLinks[1].style.color = "green";
+// headerLinks[2].style.color = "green";
+// headerLinks[3].style.color = "green";
+// headerLinks[4].style.color = "green";
+// headerLinks[5].style.color = "green";
 
 
 hdrLinksArray[0].textContent = siteContent["nav"] ["nav-item-1"];
