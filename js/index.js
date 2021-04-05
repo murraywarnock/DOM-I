@@ -54,7 +54,48 @@ hdrLinksArray[3].textContent = siteContent["nav"] ["nav-item-4"];
 hdrLinksArray[4].textContent = siteContent["nav"] ["nav-item-5"];
 hdrLinksArray[5].textContent = siteContent["nav"] ["nav-item-6"];
 
-console.log(hdrLinksArray[0]);
+// h1 text
+const headline = document.querySelector("h1");
+headline.textContent = siteContent["cta"]["h1"];
 
+// button text
+const btnGetStarted = document.querySelector("button");
+btnGetStarted.textContent = siteContent["cta"]["button"];
+
+// cta section logo
 let ctaImg = document.getElementById("cta-img");
 ctaImg.setAttribute('src', siteContent["cta"]["img-src"]);
+
+// all text-content class boxes
+const txtContent = document.querySelectorAll(".text-content");
+
+// h4 headlines for all text-content class
+txtContent[0].querySelector("h4").textContent = siteContent["main-content"] ["features-h4"];
+txtContent[1].querySelector("h4").textContent = siteContent["main-content"] ["about-h4"];
+txtContent[2].querySelector("h4").textContent = siteContent["main-content"] ["services-h4"];
+txtContent[3].querySelector("h4").textContent = siteContent["main-content"] ["product-h4"];
+txtContent[4].querySelector("h4").textContent = siteContent["main-content"] ["vision-h4"];
+
+// <p> text for all text-content class
+txtContent[0].querySelector("p").textContent = siteContent["main-content"] ["features-content"];
+txtContent[1].querySelector("p").textContent = siteContent["main-content"] ["about-content"];
+txtContent[2].querySelector("p").textContent = siteContent["main-content"] ["services-content"];
+txtContent[3].querySelector("p").textContent = siteContent["main-content"] ["product-content"];
+txtContent[4].querySelector("p").textContent = siteContent["main-content"] ["vision-content"];
+
+// cta middle image
+let middleImg = document.getElementById("middle-img");
+middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+//contact header
+const txtContact = document.querySelector(".contact");
+txtContact.querySelector("h4").textContent = siteContent["contact"] ["contact-h4"];
+//contact data
+txtContact.querySelectorAll("p")[0].textContent = siteContent["contact"] ["address"];
+txtContact.querySelectorAll("p")[1].textContent = siteContent["contact"] ["phone"];
+txtContact.querySelectorAll("p")[2].textContent = siteContent["contact"] ["email"];
+
+// footer
+footerP = document.querySelector("footer").querySelector("p");
+footerP.textContent = siteContent["footer"] ["copyright"]
+// console.log(footerP);
